@@ -87,17 +87,52 @@
         <!--generalSafety-->
         <scene sceneID="sFW-gN-GDo">
             <objects>
-                <viewController id="mZF-Jr-uu1" userLabel="generalSafety" sceneMemberID="viewController">
+                <viewController id="mZF-Jr-uu1" userLabel="generalSafety" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mtA-Q5-y8O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ye6-c1-3za">
-                                <rect key="frame" x="0.0" y="29" width="414" height="107"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orangeBlock" translatesAutoresizingMaskIntoConstraints="NO" id="ye6-c1-3za">
+                                <rect key="frame" x="0.0" y="-57" width="414" height="191"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.96467536687850952" green="0.51717919111251831" blue="0.077499277889728546" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="generalSafetyLabel" translatesAutoresizingMaskIntoConstraints="NO" id="cGc-DI-eZ6">
+                                <rect key="frame" x="47" y="74" width="308" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downArrow" translatesAutoresizingMaskIntoConstraints="NO" id="gAU-k6-hzL">
+                                <rect key="frame" x="171" y="12" width="60" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="oxW-nx-4vN">
+                                <rect key="frame" x="47" y="190" width="5859" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <mutableString key="text">Eating and drinking in the mechanical workshop areas 
+are strictly prohibited.
+
+When working with machine tools or other equipment with rotating spindles, jewelry, loose clothing etc. are prohibited and long hair must be completely covered.
+ 
+Personal Protective Equipment (PPE) is supplied and must be used where necessary. Barrier cream, lab coats/overalls, eye and hearing protection, dust masks and safety shoes must be used as the work/risk assessment dictates.
+
+Lab coats/overalls and safety boots must be worn by technicians operating 
+the machines. 
+
+The gangway through the workshop must be kept 
+clear. Any oil spillage, 
+grease etc. must be cleaned 
+up immediately.
+
+Do not carry loads such that 
+the weight may be dangerous or vision obscured. 
+
+No hazardous substance to health can be used before a COSHH risk assessment is undertaken and a safe system of work issued to the users.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Ukq-R6-5kD"/>
@@ -111,7 +146,7 @@
         <!--View Controller-->
         <scene sceneID="AOJ-wP-YAp">
             <objects>
-                <viewController id="zkG-zd-WAa" sceneMemberID="viewController">
+                <viewController id="zkG-zd-WAa" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DMF-hf-Scy" userLabel="Tools">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,9 +162,9 @@
         <!--Search-->
         <scene sceneID="IGD-Fx-6Py">
             <objects>
-                <viewController id="uHk-Pm-T7K" userLabel="Search" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="uHk-Pm-T7K" userLabel="Search" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JUk-6y-uCn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Ios-yl-ITk"/>
@@ -143,9 +178,9 @@
         <!--photoLibrary-->
         <scene sceneID="Ftj-ax-Nlw">
             <objects>
-                <viewController id="BpL-1T-rlY" userLabel="photoLibrary" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BpL-1T-rlY" userLabel="photoLibrary" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A41-yC-jGr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Z3M-md-Jpr"/>
@@ -159,9 +194,9 @@
         <!--Camera-->
         <scene sceneID="Y1p-Eq-ocL">
             <objects>
-                <viewController id="5K2-lh-TaG" userLabel="Camera" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="5K2-lh-TaG" userLabel="Camera" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IKv-2P-cdc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="nMh-Vi-7P4"/>
@@ -176,7 +211,9 @@
     <resources>
         <image name="CameraButton" width="52" height="53"/>
         <image name="cancelButton" width="53" height="53"/>
+        <image name="downArrow" width="44" height="27.5"/>
         <image name="generalSafetyLabel" width="414" height="57"/>
+        <image name="orangeBlock" width="414" height="144"/>
         <image name="orangeButton" width="347" height="70"/>
         <image name="orangeThumbButton" width="80" height="80"/>
         <image name="photosButton" width="53" height="53"/>
