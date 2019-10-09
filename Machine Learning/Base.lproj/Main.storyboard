@@ -15,15 +15,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Machine Learning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLc-W8-NPy">
-                                <rect key="frame" x="75" y="276" width="263" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orangeButton" translatesAutoresizingMaskIntoConstraints="NO" id="Iwr-Xd-zJs">
+                                <rect key="frame" x="62" y="280" width="291" height="155"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orangeButton" translatesAutoresizingMaskIntoConstraints="NO" id="YbV-aV-hGO">
+                                <rect key="frame" x="109" y="419" width="198" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efh-zN-FkZ">
+                                <rect key="frame" x="0.0" y="344" width="414" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="generalSafetyLabel">
+                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mZF-Jr-uu1" kind="show" id="Kee-fE-U6H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQn-qw-rqg">
+                                <rect key="frame" x="0.0" y="434" width="414" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="toolsLabel"/>
+                                <connections>
+                                    <segue destination="zkG-zd-WAa" kind="show" id="xHD-xS-Lb8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BJ-RR-s89">
+                                <rect key="frame" x="283" y="748" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="orangeThumbButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8A-LE-I36">
+                                <rect key="frame" x="248" y="669" width="58" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="CameraButton"/>
+                                <connections>
+                                    <segue destination="5K2-lh-TaG" kind="show" id="mjF-kv-q2D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y62-jv-ybl">
+                                <rect key="frame" x="208" y="811" width="53" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cancelButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMf-rz-6qM">
+                                <rect key="frame" x="327" y="656" width="53" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="searchButton"/>
+                                <connections>
+                                    <segue destination="uHk-Pm-T7K" kind="show" id="7DN-bc-xYQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNL-2y-Ofj">
+                                <rect key="frame" x="199" y="733" width="53" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="photosButton"/>
+                                <connections>
+                                    <segue destination="BpL-1T-rlY" kind="show" id="Jun-Ji-F5t"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -31,5 +84,103 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </scene>
+        <!--generalSafety-->
+        <scene sceneID="sFW-gN-GDo">
+            <objects>
+                <viewController id="mZF-Jr-uu1" userLabel="generalSafety" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mtA-Q5-y8O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ye6-c1-3za">
+                                <rect key="frame" x="0.0" y="29" width="414" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96467536687850952" green="0.51717919111251831" blue="0.077499277889728546" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ukq-R6-5kD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tRg-hk-H6u"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96d-Xl-w7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1953.6231884057972" y="-453.34821428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AOJ-wP-YAp">
+            <objects>
+                <viewController id="zkG-zd-WAa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DMF-hf-Scy" userLabel="Tools">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="LFt-UN-nfG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5If-fo-HZG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fIo-am-Izg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1938" y="265"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="IGD-Fx-6Py">
+            <objects>
+                <viewController id="uHk-Pm-T7K" userLabel="Search" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JUk-6y-uCn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ios-yl-ITk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AEE-Xa-FI7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNs-uf-nDi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984" y="986"/>
+        </scene>
+        <!--photoLibrary-->
+        <scene sceneID="Ftj-ax-Nlw">
+            <objects>
+                <viewController id="BpL-1T-rlY" userLabel="photoLibrary" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A41-yC-jGr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Z3M-md-Jpr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7JR-eh-All"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TOa-SO-a5v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-648" y="986"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="Y1p-Eq-ocL">
+            <objects>
+                <viewController id="5K2-lh-TaG" userLabel="Camera" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IKv-2P-cdc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="nMh-Vi-7P4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qVK-ZY-w8C"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sPN-fo-HZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="986"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="CameraButton" width="52" height="53"/>
+        <image name="cancelButton" width="53" height="53"/>
+        <image name="generalSafetyLabel" width="414" height="57"/>
+        <image name="orangeButton" width="347" height="70"/>
+        <image name="orangeThumbButton" width="80" height="80"/>
+        <image name="photosButton" width="53" height="53"/>
+        <image name="searchButton" width="53" height="53"/>
+        <image name="toolsLabel" width="414" height="57"/>
+    </resources>
 </document>
