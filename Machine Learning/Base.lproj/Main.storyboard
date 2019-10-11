@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,6 +30,7 @@
                                     <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="generalSafetyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d7R-G6-ebw"/>
                                     <segue destination="mZF-Jr-uu1" kind="show" id="Kee-fE-U6H"/>
                                 </connections>
                             </button>
@@ -93,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orangeBlock" translatesAutoresizingMaskIntoConstraints="NO" id="ye6-c1-3za">
-                                <rect key="frame" x="0.0" y="-57" width="414" height="191"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -105,14 +106,15 @@
                                 <rect key="frame" x="171" y="12" width="60" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="oxW-nx-4vN">
-                                <rect key="frame" x="47" y="190" width="5859" height="34"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VgZ-tN-CwW">
+                                <rect key="frame" x="45" y="173" width="331" height="607"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
-                                <mutableString key="text">Eating and drinking in the mechanical workshop areas 
-are strictly prohibited.
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unW-9w-hJq">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="786"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <mutableString key="text">Eating and drinking in the mechanical workshop areas are strictly prohibited.
 
 When working with machine tools or other equipment with rotating spindles, jewelry, loose clothing etc. are prohibited and long hair must be completely covered.
  
@@ -121,23 +123,29 @@ Personal Protective Equipment (PPE) is supplied and must be used where necessary
 Lab coats/overalls and safety boots must be worn by technicians operating 
 the machines. 
 
-The gangway through the workshop must be kept 
-clear. Any oil spillage, 
+The gangway through the workshop must be kept clear. Any oil spillage, 
 grease etc. must be cleaned 
 up immediately.
 
-Do not carry loads such that 
-the weight may be dangerous or vision obscured. 
+Do not carry loads such that the weight may be dangerous or vision obscured. 
 
 No hazardous substance to health can be used before a COSHH risk assessment is undertaken and a safe system of work issued to the users.</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="REh-7S-s09"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="99V-pQ-ued"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Ukq-R6-5kD"/>
                     </view>
                     <navigationItem key="navigationItem" id="tRg-hk-H6u"/>
+                    <connections>
+                        <outlet property="scrollView" destination="VgZ-tN-CwW" id="8Fb-cA-JtZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96d-Xl-w7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,7 +165,7 @@ No hazardous substance to health can be used before a COSHH risk assessment is u
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIo-am-Izg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1938" y="265"/>
+            <point key="canvasLocation" x="1954" y="887"/>
         </scene>
         <!--Search-->
         <scene sceneID="IGD-Fx-6Py">
