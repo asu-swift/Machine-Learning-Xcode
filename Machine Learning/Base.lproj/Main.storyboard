@@ -73,6 +73,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="photosButton"/>
                                 <connections>
+                                    <action selector="photoLibraryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hMa-3i-Sbv"/>
                                     <segue destination="BpL-1T-rlY" kind="show" id="Jun-Ji-F5t"/>
                                 </connections>
                             </button>
@@ -98,23 +99,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="generalSafetyLabel" translatesAutoresizingMaskIntoConstraints="NO" id="cGc-DI-eZ6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="generalSafetyLabel" translatesAutoresizingMaskIntoConstraints="NO" id="cGc-DI-eZ6">
                                 <rect key="frame" x="47" y="74" width="308" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downArrow" translatesAutoresizingMaskIntoConstraints="NO" id="gAU-k6-hzL">
                                 <rect key="frame" x="171" y="12" width="60" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VgZ-tN-CwW">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgZ-tN-CwW">
                                 <rect key="frame" x="45" y="173" width="331" height="607"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unW-9w-hJq">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unW-9w-hJq">
                                         <rect key="frame" x="0.0" y="0.0" width="331" height="786"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <mutableString key="text">Eating and drinking in the mechanical workshop areas are strictly prohibited.
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="786" id="L45-jS-EEC"/>
+                                        </constraints>
+                                        <string key="text">Eating and drinking in the mechanical workshop areas are strictly prohibited.
 
 When working with machine tools or other equipment with rotating spindles, jewelry, loose clothing etc. are prohibited and long hair must be completely covered.
  
@@ -129,17 +130,34 @@ up immediately.
 
 Do not carry loads such that the weight may be dangerous or vision obscured. 
 
-No hazardous substance to health can be used before a COSHH risk assessment is undertaken and a safe system of work issued to the users.</mutableString>
+No hazardous substance to health can be used before a COSHH risk assessment is undertaken and a safe system of work issued to the users.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="mZF-Jr-uu1" id="mmh-1q-7Gw"/>
+                                        </connections>
                                     </textView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="unW-9w-hJq" firstAttribute="leading" secondItem="99V-pQ-ued" secondAttribute="leading" id="EXm-al-a43"/>
+                                    <constraint firstAttribute="trailing" secondItem="unW-9w-hJq" secondAttribute="trailing" id="H4q-hO-bQk"/>
+                                    <constraint firstItem="unW-9w-hJq" firstAttribute="top" secondItem="REh-7S-s09" secondAttribute="top" id="Tdi-rM-b3M"/>
+                                    <constraint firstAttribute="bottom" secondItem="unW-9w-hJq" secondAttribute="bottom" constant="-179" id="Uo7-CB-Hfj"/>
+                                    <constraint firstItem="unW-9w-hJq" firstAttribute="centerX" secondItem="VgZ-tN-CwW" secondAttribute="centerX" id="WIs-AO-uwu"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="REh-7S-s09"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="99V-pQ-ued"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ukq-R6-5kD" firstAttribute="trailing" secondItem="VgZ-tN-CwW" secondAttribute="trailing" constant="38" id="95K-E5-2F4"/>
+                            <constraint firstItem="VgZ-tN-CwW" firstAttribute="leading" secondItem="Ukq-R6-5kD" secondAttribute="leading" constant="45" id="DyZ-Hm-ki5"/>
+                            <constraint firstItem="Ukq-R6-5kD" firstAttribute="bottom" secondItem="VgZ-tN-CwW" secondAttribute="bottom" constant="28" id="Txn-wk-D8a"/>
+                            <constraint firstItem="VgZ-tN-CwW" firstAttribute="top" secondItem="cGc-DI-eZ6" secondAttribute="bottom" constant="25" id="VxH-D7-Qa6"/>
+                            <constraint firstItem="VgZ-tN-CwW" firstAttribute="top" secondItem="mtA-Q5-y8O" secondAttribute="top" constant="173" id="Yu7-m8-JyP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ukq-R6-5kD"/>
                     </view>
                     <navigationItem key="navigationItem" id="tRg-hk-H6u"/>
@@ -190,14 +208,35 @@ No hazardous substance to health can be used before a COSHH risk assessment is u
                     <view key="view" contentMode="scaleToFill" id="A41-yC-jGr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="naI-vG-LJS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="695"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ew9-Xb-XSy">
+                                <rect key="frame" x="51" y="760" width="312" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="orangeButton"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="select a photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDy-3M-72P">
+                                <rect key="frame" x="98" y="785" width="218" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="27"/>
+                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Z3M-md-Jpr"/>
                     </view>
                     <navigationItem key="navigationItem" id="7JR-eh-All"/>
+                    <connections>
+                        <outlet property="photoImageOutlet" destination="naI-vG-LJS" id="iSU-Rr-UdV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOa-SO-a5v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-648" y="986"/>
+            <point key="canvasLocation" x="-649.27536231884062" y="985.71428571428567"/>
         </scene>
         <!--Camera-->
         <scene sceneID="Y1p-Eq-ocL">
