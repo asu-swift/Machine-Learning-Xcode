@@ -45,12 +45,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func generalSafetyTapped(_ sender: Any) {
         
-        let contentwidth = scrollView!.bounds.width
-        let contentHeight = scrollView.bounds.height
-        scrollView.contentSize = CGSize(width: contentwidth, height: contentHeight)
+        
         
 
-        view.addSubview(scrollView)
         
     }
     
