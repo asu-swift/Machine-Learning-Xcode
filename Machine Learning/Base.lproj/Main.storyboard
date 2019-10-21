@@ -189,6 +189,10 @@ No hazardous substance to health can be used before a COSHH risk assessment is u
                                 <rect key="frame" x="35" y="235" width="167" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="tableSaw"/>
+                                <connections>
+                                    <action selector="tableSawTapped:" destination="zkG-zd-WAa" eventType="touchUpInside" id="yRA-r4-Hyn"/>
+                                    <segue destination="eaC-ln-I0E" kind="show" id="FVO-1j-O0a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btr-4e-X5O">
                                 <rect key="frame" x="78" y="362" width="80" height="37"/>
@@ -197,6 +201,10 @@ No hazardous substance to health can be used before a COSHH risk assessment is u
                                 <state key="normal" title="Table Saw">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tableSawTapped:" destination="zkG-zd-WAa" eventType="touchUpInside" id="SWz-uI-Kae"/>
+                                    <segue destination="eaC-ln-I0E" kind="show" id="vx5-iP-J7l"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -211,17 +219,54 @@ No hazardous substance to health can be used before a COSHH risk assessment is u
         <!--View Controller-->
         <scene sceneID="0aa-Fi-Ie3">
             <objects>
-                <viewController id="eaC-ln-I0E" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="eaC-ln-I0E" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="REa-ab-j6T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orangeBlock" translatesAutoresizingMaskIntoConstraints="NO" id="TbU-Gf-8ev">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Table Saw" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQZ-hJ-bHq">
+                                <rect key="frame" x="118" y="98" width="179" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="58"/>
+                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tableSaw" translatesAutoresizingMaskIntoConstraints="NO" id="uzF-zu-UzO">
+                                <rect key="frame" x="84" y="231" width="247" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yjM-jo-DL1">
+                                <rect key="frame" x="91" y="495" width="240" height="263"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">The table saw is a variation of a cabinet saw, and is generally used to cut large panels and sheet goods such as plywood. Sliding table saws have a sliding table
+on the left side of the  blade typically usually on a folding arm mounted underneth the table saw and is used for cross cutting and ripping larger materials.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tableSaw" translatesAutoresizingMaskIntoConstraints="NO" id="D01-8p-Bre">
+                                <rect key="frame" x="84" y="231" width="247" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="eCV-jF-G4m"/>
                     </view>
+                    <navigationItem key="navigationItem" id="AoH-pu-ZG3"/>
+                    <connections>
+                        <outlet property="toolDescription" destination="yjM-jo-DL1" id="DTv-nP-IKm"/>
+                        <outlet property="toolLabel" destination="RQZ-hJ-bHq" id="3qJ-66-YdL"/>
+                        <outlet property="toolPicture" destination="D01-8p-Bre" id="K9x-8e-5kY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SJ9-ie-6EJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2914" y="887"/>
+            <point key="canvasLocation" x="2913.04347826087" y="886.60714285714278"/>
         </scene>
         <!--Search-->
         <scene sceneID="IGD-Fx-6Py">
@@ -332,4 +377,7 @@ No hazardous substance to health can be used before a COSHH risk assessment is u
         <image name="tableSaw" width="397" height="323"/>
         <image name="toolsLabel" width="414" height="57"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="vx5-iP-J7l"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -18,8 +18,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
         
         
-        
-
+    @IBOutlet weak var toolLabel: UILabel!
+    
+    @IBOutlet weak var toolPicture: UIImageView!
+    
+    @IBOutlet weak var toolDescription: UITextView!
     
     
     @IBOutlet weak var photoImageOutlet: UIImageView!
@@ -63,19 +66,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
        }
 
     
+        
+    @IBAction func tableSawTapped(_ sender: Any) {
+        toolLabel.text = "Table Saw"
+        toolPicture.image = UIImage(named: "tableSaw")
+      ///  toolDescription =
+      ///  """
+       /// The table saw is a variation of a cabinet saw, and is generally used to cut large panels and sheet goods such as plywood. Sliding table saws have a sliding table on the left side of the  blade typically usually on a folding arm mounted underneth the table saw and is used for cross cutting and ripping larger materials.
+///"""
+    }
     
-    //I am going to try and use a switch statement for the tools page so we dont have a million view controllers -SS
     
-    
-
-
     
     //need code for the camera part with overlay features
     
     
     //need code for machine leanring part
     
-    
+    //we need to get our fonts in here or we need to make all our labels in xd and export them
     
 
 }
@@ -86,7 +94,7 @@ class tableViewViewController: UIViewController, UITableViewDataSource, UISearch
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var toolTableView: UITableView!
-    let data = ["tools"]
+    let data = ["table saw"]
     
     var filteredData: [String]!
     
