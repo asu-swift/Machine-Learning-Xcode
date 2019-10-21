@@ -6,13 +6,16 @@
 //  Copyright © 2019 The Apple Fritters. All rights reserved.
 //
 
-import UIKit 
+import UIKit
+import AVKit
+import AVFoundation
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         
         
     }
@@ -26,6 +29,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @IBOutlet weak var photoImageOutlet: UIImageView!
+    
     
     
     
@@ -121,5 +125,9 @@ class tableViewViewController: UIViewController, UITableViewDataSource, UISearch
         filteredData = searchText.isEmpty ? data : data.filter{(item: String) -> Bool in return item.range(of: searchText, options: .caseInsensitive, range:nil, locale: nil) != nil}
     }
 }
+
+
+
+
 
 

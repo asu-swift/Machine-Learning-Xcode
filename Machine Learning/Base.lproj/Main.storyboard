@@ -111,7 +111,7 @@
                                 <rect key="frame" x="41" y="156" width="331" height="658"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Eating and drinking in the mechanical workshop areas are strictly prohibited.
+                                <string key="text">Eating and drinking in the mechanical workshop areas are strictly prohibited.
 
 When working with machine tools or other equipment with rotating spindles, jewelry, loose clothing etc. are prohibited and long hair must be completely covered.
  
@@ -126,7 +126,7 @@ up immediately.
 
 Do not carry loads such that the weight may be dangerous or vision obscured. 
 
-No hazardous substance to health can be used before a COSHH risk assessment is undertaken and a safe system of work issued to the users.</mutableString>
+No hazardous substance to health can be used before a COSHH risk assessment is undertaken and a safe system of work issued to the users.</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -325,7 +325,7 @@ on the left side of the  blade typically usually on a folding arm mounted undern
         <!--Camera-->
         <scene sceneID="Y1p-Eq-ocL">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="5K2-lh-TaG" userLabel="Camera" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="5K2-lh-TaG" userLabel="Camera" customClass="MLCameraViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IKv-2P-cdc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
