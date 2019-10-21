@@ -64,6 +64,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     
     
+    //I am going to try and use a switch statement for the tools page so we dont have a million view controllers -SS
+    
     
 
 
@@ -72,9 +74,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     //need code for machine leanring part
-    
-    
-    //need search bar code
     
     
     

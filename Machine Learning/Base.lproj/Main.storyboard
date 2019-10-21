@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -94,7 +91,7 @@
             <objects>
                 <viewController id="mZF-Jr-uu1" userLabel="generalSafety" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mtA-Q5-y8O">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orangeBlock" translatesAutoresizingMaskIntoConstraints="NO" id="ye6-c1-3za">
@@ -110,7 +107,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgZ-tN-CwW">
-                                <rect key="frame" x="45" y="173" width="331" height="661"/>
+                                <rect key="frame" x="45" y="173" width="331" height="607"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unW-9w-hJq">
                                         <rect key="frame" x="0.0" y="0.0" width="331" height="786"/>
@@ -175,10 +172,33 @@ No hazardous substance to health can be used before a COSHH risk assessment is u
         <!--View Controller-->
         <scene sceneID="AOJ-wP-YAp">
             <objects>
-                <viewController id="zkG-zd-WAa" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="zkG-zd-WAa" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DMF-hf-Scy" userLabel="Tools">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orangeBlock" translatesAutoresizingMaskIntoConstraints="NO" id="8s5-0D-YEx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="toolsLabel" translatesAutoresizingMaskIntoConstraints="NO" id="kvX-Ek-X33">
+                                <rect key="frame" x="130" y="108" width="154" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J77-rn-zks">
+                                <rect key="frame" x="35" y="235" width="167" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="tableSaw"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btr-4e-X5O">
+                                <rect key="frame" x="78" y="362" width="80" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="18"/>
+                                <state key="normal" title="Table Saw">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LFt-UN-nfG"/>
                     </view>
@@ -186,12 +206,27 @@ No hazardous substance to health can be used before a COSHH risk assessment is u
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIo-am-Izg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1954" y="887"/>
+            <point key="canvasLocation" x="1953.6231884057972" y="886.60714285714278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0aa-Fi-Ie3">
+            <objects>
+                <viewController id="eaC-ln-I0E" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="REa-ab-j6T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eCV-jF-G4m"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SJ9-ie-6EJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2914" y="887"/>
         </scene>
         <!--Search-->
         <scene sceneID="IGD-Fx-6Py">
             <objects>
-                <viewController id="uHk-Pm-T7K" userLabel="Search" customClass="tableViewViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="uHk-Pm-T7K" userLabel="Search" customClass="tableViewViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JUk-6y-uCn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,7 +236,7 @@ No hazardous substance to health can be used before a COSHH risk assessment is u
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <searchBar key="tableFooterView" contentMode="redraw" id="iPe-Ks-Byh">
-                                    <rect key="frame" x="0.0" y="72" width="374" height="44"/>
+                                    <rect key="frame" x="0.0" y="100" width="374" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
@@ -210,7 +245,7 @@ No hazardous substance to health can be used before a COSHH risk assessment is u
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yhI-b7-8Cn" id="HQe-cz-OvL">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -233,7 +268,7 @@ No hazardous substance to health can be used before a COSHH risk assessment is u
         <!--photoLibrary-->
         <scene sceneID="Ftj-ax-Nlw">
             <objects>
-                <viewController id="BpL-1T-rlY" userLabel="photoLibrary" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BpL-1T-rlY" userLabel="photoLibrary" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A41-yC-jGr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,7 +305,7 @@ No hazardous substance to health can be used before a COSHH risk assessment is u
         <!--Camera-->
         <scene sceneID="Y1p-Eq-ocL">
             <objects>
-                <viewController id="5K2-lh-TaG" userLabel="Camera" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="5K2-lh-TaG" userLabel="Camera" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IKv-2P-cdc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,6 +329,7 @@ No hazardous substance to health can be used before a COSHH risk assessment is u
         <image name="orangeThumbButton" width="80" height="80"/>
         <image name="photosButton" width="53" height="53"/>
         <image name="searchButton" width="53" height="53"/>
+        <image name="tableSaw" width="397" height="323"/>
         <image name="toolsLabel" width="414" height="57"/>
     </resources>
 </document>
