@@ -81,3 +81,41 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
 }
 
+class tableViewViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
+    
+    
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var toolTableView: UITableView!
+    let data = ["tools"]
+    
+    var filteredData: [String]!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        toolTableView.dataSource = self
+        searchBar.delegate = self
+        filteredData = data
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let myCell = tableView.dequeueReusableCell(withIdentifier: "toolTableViewCell")
+        let holderText = data[indexPath.row]
+        myCell?.textLabel?.text = holderText
+        return myCell!
+    }
+    
+    func searchBar (_searchBar: UISearchBar, textDidChange searchText: String)
+    {
+        filteredData = searchText.isEmpty ? data : data.filter{(item: String) -> Bool in return item.range(of: searchText, options: .caseInsensitive, range:nil, locale: nil) != nil}
+    }
+}
+
+
