@@ -9,8 +9,11 @@
 import UIKit
 import AVKit
 import AVFoundation
+import CoreML
+import Vision
 
-class MLCameraViewController: UIViewController {
+
+class MLCameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +33,37 @@ class MLCameraViewController: UIViewController {
                    let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
                    view.layer.addSublayer(previewLayer)
                    previewLayer.frame = view.frame
+        
+        let dataOutput = AVCaptureVideoDataOutput()
+    
+        dataOutput.setSampleBufferDelegate(self as! AVCaptureVideoDataOutputSampleBufferDelegate, queue: DispatchQueue(label: "videoQueue"))
+        captureSession.addOutput(dataOutput)
                    
 
         
         
+        
         }
+    
+    func captureOutput( output:AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection){
+        print("Testing capture", Date())
+    
+        guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+       
+        guard let model = try? VNCoreMLModel(for: ImageClassifier().model) else { return }
+        
+        let request = VNCoreMLRequest(model: model)
+        {
+            (finishedReq, err) in
+        //check err
+            print(finishedReq.results)
+            
+            
+        }
+        try? VNImageRequestHandler(cvPixelBuffer:pixelBuffer, options: [:]).perform([request])
+    
+        
+    }
 
     
     }
