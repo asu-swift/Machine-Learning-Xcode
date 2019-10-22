@@ -184,6 +184,45 @@ No hazardous substance to health can be used before a COSHH risk assessment is u
                                     <segue destination="eaC-ln-I0E" kind="show" id="vx5-iP-J7l"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB0-Lm-UpD">
+                                <rect key="frame" x="35" y="429" width="167" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="band saw7"/>
+                                <connections>
+                                    <segue destination="lTL-IQ-fe4" kind="show" id="DcK-vq-yhX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKd-7F-Omk">
+                                <rect key="frame" x="80" y="571" width="77" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="18"/>
+                                <state key="normal" title="Band Saw">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tableSawTapped:" destination="zkG-zd-WAa" eventType="touchUpInside" id="f2r-Zx-1JA"/>
+                                    <segue destination="lTL-IQ-fe4" kind="show" id="Yyl-fH-9Hq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDX-MD-QTo">
+                                <rect key="frame" x="35" y="625" width="167" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="panel saw9"/>
+                                <connections>
+                                    <segue destination="RvA-PX-scx" kind="show" id="wKl-3X-x8P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oof-Jk-HvH">
+                                <rect key="frame" x="80" y="775" width="80" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="18"/>
+                                <state key="normal" title="Panel Saw">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RvA-PX-scx" kind="show" id="sWD-9z-bk8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LFt-UN-nfG"/>
@@ -244,7 +283,7 @@ on the left side of the  blade typically usually on a folding arm mounted undern
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SJ9-ie-6EJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2913.04347826087" y="886.60714285714278"/>
+            <point key="canvasLocation" x="2768" y="495"/>
         </scene>
         <!--Search-->
         <scene sceneID="IGD-Fx-6Py">
@@ -341,21 +380,117 @@ on the left side of the  blade typically usually on a folding arm mounted undern
             </objects>
             <point key="canvasLocation" x="181" y="986"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="DY4-SS-ZA6">
+            <objects>
+                <viewController id="lTL-IQ-fe4" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5LW-K4-lBK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orangeBlock" translatesAutoresizingMaskIntoConstraints="NO" id="aKc-Du-18B">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Band Saw" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC8-xy-se9">
+                                <rect key="frame" x="118" y="98" width="178" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="58"/>
+                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z1H-3b-wLR">
+                                <rect key="frame" x="91" y="495" width="240" height="263"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">The band saw is an endless saw, consisting of a steel band with a serrated edge running over wheels. The band saw's most common use is cutting irregular shapes and curves. </string>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="band saw7" translatesAutoresizingMaskIntoConstraints="NO" id="LMF-jh-hHG">
+                                <rect key="frame" x="29" y="246" width="356" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="d4x-Kr-fz4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hc4-aM-8Kv"/>
+                    <connections>
+                        <outlet property="toolDescription" destination="z1H-3b-wLR" id="8Yj-ip-SuQ"/>
+                        <outlet property="toolLabel" destination="bC8-xy-se9" id="eMb-f5-aqB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1bO-We-mHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3497" y="1023"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8li-qs-n6U">
+            <objects>
+                <viewController id="RvA-PX-scx" customClass="ViewController" customModule="Machine_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sl7-hb-8Gt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orangeBlock" translatesAutoresizingMaskIntoConstraints="NO" id="khZ-Gm-ndh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Panel Saw" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7h-Lp-CcT">
+                                <rect key="frame" x="118" y="98" width="186" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="58"/>
+                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xBh-mr-rLG">
+                                <rect key="frame" x="91" y="495" width="240" height="263"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">The panel saw cuts sheets into sized parts. Panel saws can be vertical or horizontal. Panel saws are used to easily cut panels, solid-wood, plywood, MDF, laminates, plastic sheets, etc. Panel saws are most commonly used in cabinet shops to easily cut panels for cabinet making</string>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panel saw9" translatesAutoresizingMaskIntoConstraints="NO" id="rvz-Bx-MFm">
+                                <rect key="frame" x="29" y="246" width="356" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zGs-Sj-H20"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WCN-pu-kVt"/>
+                    <connections>
+                        <outlet property="toolDescription" destination="xBh-mr-rLG" id="bcq-Da-Uob"/>
+                        <outlet property="toolLabel" destination="J7h-Lp-CcT" id="cAJ-QP-rWa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uCn-vK-6mS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725" y="1414"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CameraButton" width="52" height="53"/>
+        <image name="band saw7" width="225" height="225"/>
         <image name="cancelButton" width="53" height="53"/>
         <image name="downArrow" width="44" height="27.5"/>
         <image name="generalSafetyLabel" width="414" height="57"/>
         <image name="orangeBlock" width="414" height="144"/>
         <image name="orangeButton" width="347" height="70"/>
         <image name="orangeThumbButton" width="80" height="80"/>
+        <image name="panel saw9" width="225" height="225"/>
         <image name="photosButton" width="53" height="53"/>
         <image name="searchButton" width="53" height="53"/>
         <image name="tableSaw" width="397" height="323"/>
         <image name="toolsLabel" width="414" height="57"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="sWD-9z-bk8"/>
+        <segue reference="DcK-vq-yhX"/>
         <segue reference="vx5-iP-J7l"/>
     </inferredMetricsTieBreakers>
 </document>
