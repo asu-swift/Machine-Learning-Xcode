@@ -19,6 +19,8 @@ class MLCameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
         super.viewDidLoad()
 
         let captureSession = AVCaptureSession()
+        
+        captureSession.sessionPreset = .photo
                    
                    guard let captureDevice = AVCaptureDevice.default(for: .video) else {
                        return
@@ -50,7 +52,9 @@ class MLCameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
        
+        
         guard let model = try? VNCoreMLModel(for: ImageClassifier().model) else { return }
+        
         
         let request = VNCoreMLRequest(model: model)
         {
@@ -60,6 +64,7 @@ class MLCameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
             
             
         }
+        
         try? VNImageRequestHandler(cvPixelBuffer:pixelBuffer, options: [:]).perform([request])
     
         
