@@ -26,19 +26,19 @@ class MLCameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
                        return
                    }
                    
-                   guard let input = try? AVCaptureDeviceInput(device: captureDevice) else {
-                       return
-                   }
+                   guard let input = try? AVCaptureDeviceInput(device: captureDevice) else {return}
                    
                    captureSession.addInput(input)
+        
+        captureSession.startRunning()
                    
                    let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-                   view.layer.addSublayer(previewLayer)
+                   
+        view.layer.addSublayer(previewLayer)
                    previewLayer.frame = view.frame
         
         let dataOutput = AVCaptureVideoDataOutput()
-    
-        dataOutput.setSampleBufferDelegate(self as! AVCaptureVideoDataOutputSampleBufferDelegate, queue: DispatchQueue(label: "videoQueue"))
+        dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
         captureSession.addOutput(dataOutput)
                    
 
