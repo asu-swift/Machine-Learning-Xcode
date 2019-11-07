@@ -1,22 +1,22 @@
-Name
-# Machine Learning
+# Name
+Machine Learning
 
-Description
+# Description
 Machine Learning is an app that was created to help anyone in a tool shop or maker’s space. The app has been trained to recognize various tools using a process known as machine learning. The user takes a photo, or uses an existing photo to search Machine Learning’s database for the tool description and safety tips. This app also features general safety tips for the workshop. 
 
-Visuals
+# Visuals
 
-Installation
+# Installation
 
-Usage
+# Usage
 
-Support
+# Support
 
-Roadmap
+# Roadmap
 
-Contributing
+# Contributing
 
-Authors and acknowledgment
+# Authors and acknowledgment
 The Apple Fritters
 	Tim Arquitt
 	Cameron Buckley
@@ -26,9 +26,9 @@ The Apple Fritters
 	Brittany Waters
 The Apple Fritters are a limited liability corportation. 
 
-License
+# License
 This app has a attribution-noncommericial-sharealike license. You are able to download, modify and/or share our app as long as you share it with the same license and non commercially.  
 
-Project status
+# Project status
 This project is currently in development. 
 
