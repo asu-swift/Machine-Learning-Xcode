@@ -1,5 +1,5 @@
 Name
-#Machine Learning
+# Machine Learning
 
 Description
 Machine Learning is an app that was created to help anyone in a tool shop or maker’s space. The app has been trained to recognize various tools using a process known as machine learning. The user takes a photo, or uses an existing photo to search Machine Learning’s database for the tool description and safety tips. This app also features general safety tips for the workshop. 
