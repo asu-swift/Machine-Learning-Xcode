@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4CC4DCF1235E6E36000EF40F /* MLCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4DCF0235E6E36000EF40F /* MLCameraViewController.swift */; };
+		4CC4DCF3235EB640000EF40F /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4DCF2235EB640000EF40F /* ImageClassifier.mlmodel */; };
 		D9B5A79B234E28B5004F9382 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B5A79A234E28B5004F9382 /* AppDelegate.swift */; };
 		D9B5A79D234E28B5004F9382 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B5A79C234E28B5004F9382 /* SceneDelegate.swift */; };
 		D9B5A79F234E28B5004F9382 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B5A79E234E28B5004F9382 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		4CC4DCF0235E6E36000EF40F /* MLCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLCameraViewController.swift; sourceTree = "<group>"; };
+		4CC4DCF2235EB640000EF40F /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
 		D9B5A797234E28B5004F9382 /* Machine Learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Machine Learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B5A79A234E28B5004F9382 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9B5A79C234E28B5004F9382 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				D9B5A79C234E28B5004F9382 /* SceneDelegate.swift */,
 				D9B5A79E234E28B5004F9382 /* ViewController.swift */,
 				D9B5A7A0234E28B5004F9382 /* Main.storyboard */,
+				4CC4DCF2235EB640000EF40F /* ImageClassifier.mlmodel */,
 				4CC4DCF0235E6E36000EF40F /* MLCameraViewController.swift */,
 				D9B5A7A6234E28B7004F9382 /* Assets.xcassets */,
 				D9B5A7A8234E28B7004F9382 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9B5A79F234E28B5004F9382 /* ViewController.swift in Sources */,
+				4CC4DCF3235EB640000EF40F /* ImageClassifier.mlmodel in Sources */,
 				D9B5A7A5234E28B5004F9382 /* Machine_Learning.xcdatamodeld in Sources */,
 				D9B5A79B234E28B5004F9382 /* AppDelegate.swift in Sources */,
 				D9B5A79D234E28B5004F9382 /* SceneDelegate.swift in Sources */,
@@ -293,6 +297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZSW2844BX;
 				INFOPLIST_FILE = "Machine Learning/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -310,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZSW2844BX;
 				INFOPLIST_FILE = "Machine Learning/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
