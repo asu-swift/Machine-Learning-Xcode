@@ -13,11 +13,21 @@ import CoreML
 import Vision
 
 
-class MLCameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class MLCameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate{
 
+    let mlCamLable: UILabel = {
+        let lable = UILabel()
+        lable.backgroundColor = .white
+        lable.textAlignment = .center
+        lable.translatesAutoresizingMaskIntoConstraints = false
+        return lable
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         let captureSession = AVCaptureSession()
         
         captureSession.sessionPreset = .photo
@@ -60,10 +70,21 @@ class MLCameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
         {
             (finishedReq, err) in
         //check err
-            print(finishedReq.results)
+            //print(finishedReq.results)
+            
+            guard let results = finishedReq.results as? [VNClassificationObservation]
+                else {return}
+            
+            guard let firstObservation = results.first else {return}
+            
+            DispatchQueue.main.async {
+                self.mlCamLable.text = "\(firstObservation.identifier) \(firstObservation.confidence * 100)"
+                
+            }
             
             
-        }
+            }
+
         
         try? VNImageRequestHandler(cvPixelBuffer:pixelBuffer, options: [:]).perform([request])
     
