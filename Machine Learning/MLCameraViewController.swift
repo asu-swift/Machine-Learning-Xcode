@@ -18,8 +18,10 @@ class MLCameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBu
     let mlCamLable: UILabel = {
         let lable = UILabel()
         lable.backgroundColor = .white
+        lable.textColor = .black
         lable.textAlignment = .center
         lable.translatesAutoresizingMaskIntoConstraints = false
+        lable.frame.origin = CGPoint(x: 200, y: 20)
         return lable
     }()
     
