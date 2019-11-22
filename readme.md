@@ -15,6 +15,7 @@ Machine Learning is an app that was created to help anyone in a tool shop or mak
 # Roadmap
 
 # Contributing
+We would be happy to have contributers. You are welcome to download and work on our project as long as you share our app with the same liscense and non commercially.
 
 # Authors and acknowledgment
 The Apple Fritters consists of 6 member: Tim Arquitt, Cameron Buckley, James Cotter, Mykala Lemmons, Sabrina Sturtevant  and Brittany Waters. The Apple Fritters are a limited liability corportation. 
