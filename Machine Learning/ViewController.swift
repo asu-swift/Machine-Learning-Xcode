@@ -93,9 +93,9 @@ class tableViewViewController: UIViewController, UITableViewDataSource, UISearch
     
     
     
-    @IBOutlet weak var searchBar: UISearchBar!
+   
     @IBOutlet weak var toolTableView: UITableView!
-    let data = ["table saw"]
+    let data = ["Table Saw", "Band Saw", "Panel Saw"]
     
     var filteredData: [String]!
     
@@ -103,7 +103,6 @@ class tableViewViewController: UIViewController, UITableViewDataSource, UISearch
     override func viewDidLoad() {
         super.viewDidLoad()
         toolTableView.dataSource = self
-        searchBar.delegate = self
         filteredData = data
     }
     
@@ -120,10 +119,14 @@ class tableViewViewController: UIViewController, UITableViewDataSource, UISearch
         return myCell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    
     func searchBar (_searchBar: UISearchBar, textDidChange searchText: String)
     {
         filteredData = searchText.isEmpty ? data : data.filter{(item: String) -> Bool in return item.range(of: searchText, options: .caseInsensitive, range:nil, locale: nil) != nil}
     }
+}
 }
 
 
